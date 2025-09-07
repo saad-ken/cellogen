@@ -2,12 +2,12 @@
 import React from "react";
 import sellimage from "../assets/p1.webp";
 
-export default function Product() {
+export default function Product({ referralUrl }) {
   return (
     <section className="py-28 max-w-7xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-start justify-between gap-12">
       {" "}
       {/* Emerald Transparent Background */}{" "}
-      <div className="absolute inset-0 bg-emerald-500/10 -z-10"></div>
+      <div className="absolute inset-0 -z-10"></div>
       {/* Left - Product Info */}
       <div className="w-full md:w-5/12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -45,9 +45,14 @@ export default function Product() {
           </p>
         </div>
 
-        <button className="mt-8 px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition">
-          Click on referral
-        </button>
+        <a
+          href={referralUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition"
+        >
+          Get Started
+        </a>
       </div>
       {/* Right - Product Image Container (Stretchable) */}
       <div className="w-full md:w-7/12 h-[28rem] flex justify-center items-center bg-white rounded-2xl shadow-lg overflow-hidden">

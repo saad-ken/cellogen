@@ -2,7 +2,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import AutoCarousel from "./AutoCarousel.jsx";
 
-export default function HeroSection() {
+export default function HeroSection({
+  referralUrl = "https://alprimus.com/register?sponsor=5766580&side=right",
+}) {
   const textRef = useRef(null);
   const imageRef = useRef(null);
 
@@ -48,9 +50,14 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-6">
-            <button className="px-6 py-3 bg-green-600 text-white font-medium rounded-xl shadow-md hover:bg-green-700 transition">
+            <a
+              href={referralUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-green-600 text-white font-medium rounded-xl shadow-md hover:bg-green-700 transition"
+            >
               Get Started
-            </button>
+            </a>
           </div>
         </div>
 

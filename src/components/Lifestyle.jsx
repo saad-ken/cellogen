@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react"; // icon for closing modal
 
-export default function Lifestyle() {
+export default function Lifestyle({ referralUrl }) {
   const [showVideo, setShowVideo] = useState(false);
   const PlayIcon = "https://www.svgrepo.com/show/421070/play-video-youtube.svg";
 
@@ -42,9 +42,14 @@ export default function Lifestyle() {
           <p className="text-xl text-emerald-950 font-medium">
             It’s time to start your journey
           </p>
-          <button className="mt-4 px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition">
-            Get in Touch with ALprimus.com
-          </button>
+          <a
+            href={referralUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition inline-block"
+          >
+            Get in Touch with alprimus.com
+          </a>
         </div>
       </div>
       {/* Video Modal */}

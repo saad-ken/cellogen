@@ -4,8 +4,20 @@ import gsap from "gsap";
 import productImg1 from "../assets/1.jpeg";
 import productImg2 from "../assets/2.jpeg";
 import productImg3 from "../assets/7.jpeg";
+import productImg8 from "../assets/8.jpeg";
+import productImg9 from "../assets/9.jpeg";
+import productImg10 from "../assets/10.jpeg";
+import productImg11 from "../assets/ma.jpeg";
 
-const images = [productImg1, productImg2, productImg3];
+const images = [
+  productImg1,
+  productImg2,
+  productImg3,
+  productImg8,
+  productImg9,
+  productImg10,
+  productImg11,
+];
 
 export default function AutoCarousel() {
   const [current, setCurrent] = useState(0);

@@ -14,6 +14,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import ContactUs from "./components/ContactUs";
 
 function App() {
+  let referralUrl = "https://alprimus.com/register?sponsor=5766580&side=right";
+
   return (
     <div className="min-h-screen bg-neutralBg text-gray-800 mb-8">
       <Navbar />
@@ -27,7 +29,7 @@ function App() {
               <HeroSection />
               <AboutUs />
               <ContentSwitch items={contentItems} />
-              <Lifestyle />
+              <Lifestyle referralUrl={referralUrl} />
               <Footer />
             </>
           }
@@ -38,7 +40,7 @@ function App() {
           element={
             <>
               <InformationPage />
-              <Lifestyle />
+              <Lifestyle referralUrl={referralUrl} />
               <Footer />
             </>
           }
@@ -48,8 +50,8 @@ function App() {
           path="/product"
           element={
             <>
-              <Product />
-              <Lifestyle />
+              <Product referralUrl={referralUrl} />
+              <Lifestyle referralUrl={referralUrl} />
               <Footer />
             </>
           }
@@ -60,7 +62,7 @@ function App() {
           element={
             <>
               <ContactUs />
-              <Lifestyle />
+              <Lifestyle referralUrl={referralUrl} />
               <Footer />
             </>
           }
